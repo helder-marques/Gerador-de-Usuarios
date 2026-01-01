@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Nutrição</title>
+  </head>
+  <body>
+    <h1>Cadastro de Pacientes</h1>
+
+    <form id="formPaciente">
+      <input type="text" id="nome" placeholder="Nome" required />
+
+      <select id="sexo" required>
+        <option value="">Sexo</option>
+        <option value="M">Masculino</option>
+        <option value="F">Feminino</option>
+      </select>
+
+      <input type="date" id="dataNascimento" required />
+      <input
+        type="number"
+        id="altura"
+        step="0.01"
+        placeholder="Altura (m)"
+        required
+      />
+
+      <button type="submit">Salvar</button>
+    </form>
+
+    <h2>Pacientes Cadastrados</h2>
+    <ul id="listaPacientes"></ul>
+
+    <select id="selectPaciente">
+      <option value="">Selecione um paciente</option>
+    </select>
+
+    <h2>Avaliação Antropométrica</h2>
+    <form id="formAvaliacao">
+      <input type="number" id="peso" placeholder="Peso (kg)" required />
+      <input type="number" id="cintura" placeholder="Cintura (cm)" required />
+      <input type="date" id="dataAvaliacao" required />
+
+      <button type="submit">Salvar Avaliação</button>
+    </form>
+
+    <h3>Histórico de Avaliações</h3>
+    <ul id="listaAvaliacoes"></ul>
+
+    <script src="db.js"></script>
+    <script src="ui.js"></script>
+  </body>
+</html>
